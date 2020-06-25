@@ -1,0 +1,8 @@
+.box_color {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  transition: all 1s ease-in-out 0s;
+  cursor: pointer;
+}
