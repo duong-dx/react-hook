@@ -3,19 +3,21 @@ import "./styles.css";
 import Counter from "./component/Counter";
 import HookCounter from "./hooks/HookCounter";
 import HookListTodo from "./hooks/HookListTodo";
-import BoxColor from "./hooks/BoxColor";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import AppNew from "./hooks/ToDoList/AppNew";
 import PostMain from "./hooks/PostList/PostMain";
+import BoxColor1 from "./hooks/BoxColor/BoxColor1";
+import BoxColor2 from "./hooks/BoxColor/BoxColor2";
 
 export default function App() {
     return (
         <Router>
             <div className="App">
-                <Counter/>
+                {/*<Counter/>*/}
                 <HookCounter/>
                 <HookListTodo/>
-                <BoxColor/>
+                <BoxColor1 />
+                <BoxColor2 />
             </div>
             <div><Link to={"/"}>Back to App</Link></div>
             <div><Link to={"/to-list"}>Go to App ToDo List</Link></div>

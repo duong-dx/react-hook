@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import "../scss/BoxColor.css";
 
 function getColorRandom() {
     const COLOR_LIST = [
@@ -18,9 +17,7 @@ function getColorRandom() {
     return COLOR_LIST[RANDOM_INDEX];
 }
 
-BoxColor.propType = {};
-
-function BoxColor() {
+function useBoxColor() {
     const [color, setColor] = useState(() => {
         //goi 1 lan duy nhat khi khoi tao
         const initColor = localStorage.getItem("box_color") || "black";
@@ -40,13 +37,7 @@ function BoxColor() {
             clearInterval(timeColor);
         };
     }, []);
-    return (
-        <div
-            className={"box_color"}
-            style={{backgroundColor: color}}
-            onClick={() => handleColor()}
-        />
-    );
+    return { color };
 }
 
-export default BoxColor;
+export default useBoxColor;

@@ -16,7 +16,6 @@ function PostMain() {
        _limit: 10,
        _page: 1,
     });
-    const [dataSearch, setDataSearch] = useState();
 
     useEffect(() => {
         const getDataApi = async () => {
@@ -30,7 +29,6 @@ function PostMain() {
                         return response;
                     })
                     .catch(error => console.log(error.message));
-                console.log(response);
                 setMainPost(response.data);
                 setPaginet(response.data.pagination);
             } catch (e) {

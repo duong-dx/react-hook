@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DisplayText from "./DisplayText";
 
 export default function HookCounter(props) {
   const [count, setCount] = useState(0);
@@ -8,6 +9,7 @@ export default function HookCounter(props) {
       <div>
         <h1>{count}</h1>
       </div>
+        <DisplayText name={"XIN CHAO CHAOCHAOCHAOCHAOCHAOCHAOCHAOCHAOCHAO !!!!!!!!!!"}/>
     </div>
   );
 }
